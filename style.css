@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Magra:wght@400;700&family=Pattaya&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* font-family: 'Inria Sans', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Magra', sans-serif;
+font-family: 'Pattaya', sans-serif; */
+
+body {
+    margin: 0;
+    background-image: url('images/spikes.png');
+    background-repeat: repeat;
+}
+
+.header {
+    text-align: center;
+    margin: 0 auto;
+    width: intrinsic;
+    /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;
+    /* Firefox/Gecko */
+    width: -webkit-max-content;
+    /* Chrome */
+    width: max-content;
+}
+
+#title{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 4.75rem;
+    color: rgba(56, 56, 56, 0.98);
+    margin-top: 2.5rem;
+    letter-spacing: -.3rem;
+}
+
+.semi{
+    font-weight: 600;
+}
+
+
+#call-to-action{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 400;
+    color: rgb(199, 33, 166);
+    margin-top: 0.35rem;
+}
+
+#details{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 300;
+    margin-top: 0.25rem;
+    font-style: italic;
+    margin-bottom: 1.85rem;
+}
+
+.player-stats, .computer-stats, .main, .images, .btns, .arena {
+    display: flex;
+}
+
+.player-stats, .computer-stats, .arena {
+    flex-direction: column;
+}
+
+.player-stats, .computer-stats{
+    align-items: center;
+    width: 175px;
+    justify-content: space-between;
+}
+
+.main, .images, .btns, .restart {
+    margin: 0 auto;
+}
+
+.main, .arena {
+    height: 250px;
+}
+
+.main {
+    width: 995;
+    justify-content: center;
+    margin-bottom: 23px;
+}
+
+.player, .computer{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    letter-spacing: -.05rem;
+    color: rgb(17, 0, 110);
+}
+
+.player-score, .computer-score{
+    width: 95px;
+    height: 65px;
+    border-style: dashed;
+    border-radius: 10px;
+    border-width: 0.75px;
+    border-color: rgba(0, 0, 0, 0.651);
+    text-align: center;
+    background-color: rgba(233, 62, 255, 0.5);
+    font-size: 3.2rem;
+    font-family: 'Pattaya', sans-serif;
+    color: white;
+}
+
+.player-selection, .computer-selection{
+    width: 115px;
+    height: 115px;
+}
+
+.arena {
+    justify-content: center;
+    width: 645px;
+    background-color: rgba(17, 223, 250, 0.15);
+    border-radius: 25px;
+    border-style: dashed;
+    border-width: 0.75px;
+    border-color: rgba(0, 0, 0, 0.651);
+}
+
+.arena-text {
+    margin: 0 auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: rgba(56, 56, 56, 0.5);
+    font-style: italic;
+    text-align: center;
+}
+
+.arena-active{
+    margin: 0 auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: rgba(56, 56, 56, 0.918);
+    font-style: normal;
+    text-align: center;
+}
+
+img {
+    width: 215px;
+    height: 215px;
+
+}
+
+.images, .btns {
+    width: 645px;
+    justify-content: space-around;
+}
+
+.btns{
+    margin-top: 0.75rem;
+}
+
+.btn {
+    text-align: center;
+    width: 150px;
+    height: 40px; 
+    background-color: rgba(75, 75, 75, 0.15);
+    border-radius: 7px;
+    color: rgb(39, 22, 136);
+}
+
+.btn::selection, .restart::selection{
+    color: none;
+    background-color: none;
+}
+
+.btn:hover{
+    border-style: solid;
+    border-color: rgb(39, 22, 136);
+    border-width: 1px;
+    color: rgb(251,55,212);
+    cursor: pointer;
+    background-color: rgb(69,234,255);
+    box-shadow: 0 0 10px rgb(251,55,212);
+}
+
+.btn-ROCK{
+    font-family: 'Josefin Sans', sans-serif; 
+    line-height: 47px;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.btn-PAPER{
+    font-family: 'Pattaya', sans-serif; 
+    line-height: 43px;
+    font-weight: 400;
+    font-size: 1.9rem;
+    letter-spacing: 0rem;
+}
+
+.btn-SCISSORS{
+    font-family: 'Inria Sans', sans-serif; 
+    line-height: 39px;
+    font-weight: 200;
+    font-size: 1.75rem;
+    letter-spacing: 0rem;
+    font-style: italic;
+}
+
+.restart {
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    margin: 1.75rem auto 0 auto;
+    background-color: rgba(0, 255, 255, 0.562);
+    border-radius: 25px;
+    font-family: 'Josefin Sans', sans-serif; 
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 28px;
+}
+
+.restart:hover{
+    border-style: solid;
+    border-width: 0.5px;
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, 0.589);
+    font-weight: 400;
+}
+
+.game-over {
+    animation: bgColor 3.5s infinite linear;
+    color: rgba(56, 56, 56, 0.918);
+  }
+  @keyframes bgColor {
+    0% {
+        background-color: rgba(128, 255, 0, 0.25);
+      }    
+    12.5% {
+      background-color: rgba(255, 0, 242, 0.25);
+    }
+    25% {
+      background-color: rgba(255, 166, 0, 0.25);
+    }
+    37.5% {
+      background-color: rgba(255, 255, 0, 0.25);
+    }
+    50% {
+      background-color: rgba(255, 0, 0, 0.25);
+    }
+    62.5% {
+      background-color: rgba(0, 255, 255, 0.25);
+    }
+    75% {
+      background-color: rgba(0, 0, 255, 0.25);
+    }
+    87.5% {
+      background-color: rgba(153, 50, 204, 0.25);
+    }
+    100% {
+      background-color: rgba(128, 255, 0, 0.25)/* rgba(255, 20, 145, 0.25) */;
+    }
+  }
+
+.image, .player-selection, .computer-selection{
+    transition: transform 0.25s ease;
+}
+
+.rotate{
+    transform: rotate(360deg);
+    transition: transform 0.25s ease;
+}
+
