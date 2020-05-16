@@ -1,6 +1,5 @@
 const btns = Array.from(document.querySelectorAll('div.btn'));
 btns.forEach(btn => btn.addEventListener('click', game));
-// add another event listener for the restart button
 document.querySelector('.restart').addEventListener('click', resetGame);
 
 const arenaText = document.querySelector('.arena-text');
@@ -14,7 +13,7 @@ let wins = 0;
 let losses = 0;
 
 function game(e) {
-    if (wins === 5 || losses === 5) resetGame();
+    if (wins === 5 || losses === 5) resetGame('auto');
 
     let computerSelection = computerPlay();
     let playerSelection = e.target.textContent;    
@@ -71,10 +70,13 @@ function updateImages(playerSelection, computerSelection) {
     computerImage.src = `images/${computerSelection}.png`;
 }
 
-function resetGame() {
-    //remove the game over effect if applied
+function resetGame(auto) {
     wins = 0;
     losses = 0;
+    if (auto!=='auto'){
+        playerImage.classList.toggle('rotate');
+        computerImage.classList.toggle('rotate');
+    }
     arena.classList.remove('game-over');
     playerScore.classList.remove('game-over');
     computerScore.classList.remove('game-over');
